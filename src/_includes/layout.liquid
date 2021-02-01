@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+{% include partials/head.html %}
+
+<body>
+  <main class="flex flex-col min-h-screen">
+    {% include partials/nav.html %}
+    <div class="flex-grow p-4">
+      {{ content | safe }}
+    </div>
+    {% include partials/footer.html %}
+  </main>
+</body>
+
+</html>

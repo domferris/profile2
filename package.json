@@ -1,0 +1,31 @@
+{
+  "name": "profile2",
+  "version": "1.0.0",
+  "description": "Dominic's profile",
+  "main": "index.js",
+  "scripts": {
+    "build": "postcss src/styles/tailwind.css -o _site/styles/tailwind.css && npx @11ty/eleventy",
+    "dev": "eleventy --watch --serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/domferris/profile2.git"
+  },
+  "author": "Dominic Ferris",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/domferris/profile2/issues"
+  },
+  "homepage": "https://github.com/domferris/profile2#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.11.1",
+    "postcss-cli": "^8.3.1",
+    "tailwindcss": "^2.0.2"
+  },
+  "dependencies": {
+    "autoprefixer": "^10.2.4",
+    "postcss": "^8.2.4",
+    "postcss-custom-properties": "^11.0.0",
+    "postcss-nested": "^5.0.3"
+  }
+}

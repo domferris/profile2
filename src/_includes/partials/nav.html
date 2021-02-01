@@ -1,0 +1,17 @@
+<nav class="flex flex-col sm:flex-row justify-between shadow">
+  <a class="inline-block w-full text-center text-gray-800 p-4{% if page.url == '/' %} active{% endif %}" href="/">
+    Home
+  </a>
+  <a class="inline-block w-full text-center text-gray-800 p-4{% if page_title == 'Projects' %} active{% endif %}" href="/projects">
+    Projects
+  </a>
+  <a class="inline-block w-full text-center text-gray-800 p-4{% if page_title == 'Experience' %} active{% endif %}" href="/experience">
+    Experience
+  </a>
+  <a class="inline-block w-full text-center text-gray-800 p-4{% if page_title == 'Education' %} active{% endif %}" href="/education">
+    Education
+  </a>
+  <a class="inline-block w-full text-center text-gray-800 p-4{% if page_title == 'About' %} active{% endif %}" href="/info">
+    Learn more
+  </a>
+</nav>
