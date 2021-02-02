@@ -3,9 +3,9 @@
 {% include partials/head.html %}
 
 <body>
-  <main class="flex flex-col min-h-screen">
+  <main class="flex flex-col h-screen">
     {% include partials/nav.html %}
-    <div class="flex-grow p-4">
+    <div class="flex-grow h-full p-4">
       {{ content | safe }}
     </div>
     {% include partials/footer.html %}

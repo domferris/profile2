@@ -1,17 +1,20 @@
-<nav class="flex flex-col sm:flex-row justify-between shadow">
-  <a class="inline-block w-full text-center text-gray-800 p-4{% if page.url == '/' %} active{% endif %}" href="/">
-    Home
-  </a>
-  <a class="inline-block w-full text-center text-gray-800 p-4{% if page_title == 'Projects' %} active{% endif %}" href="/projects">
-    Projects
-  </a>
-  <a class="inline-block w-full text-center text-gray-800 p-4{% if page_title == 'Experience' %} active{% endif %}" href="/experience">
-    Experience
-  </a>
-  <a class="inline-block w-full text-center text-gray-800 p-4{% if page_title == 'Education' %} active{% endif %}" href="/education">
-    Education
-  </a>
-  <a class="inline-block w-full text-center text-gray-800 p-4{% if page_title == 'About' %} active{% endif %}" href="/info">
-    Learn more
-  </a>
+<nav class="flex flex-col sm:flex-row justify-between items-center shadow">
+  <a class="mx-auto sm:m-0 pt-4 sm:p-4" href="/"><span class="inline-block text-gray-800 font-extrabold text-3xl sm:text-4xl tracking-wider uppercase">Dominic Ferris</span></a>
+  <ul class="flex flex-nowrap mx-auto sm:m-0 p-4">
+    <li class="inline">
+      <a href="/projects" class="tracking-wide text-sm sm:text-lg uppercase font-semibold text-gray-800{% if page_title == 'Projects' %} active{% endif %}">
+        projects
+      </a>
+    </li>
+    <li class="inline">
+      <a href="/about" class="tracking-wide text-sm sm:text-lg uppercase font-semibold px-4 text-gray-800{% if page_title == 'About' %} active{% endif %}">
+        about
+      </a>
+    </li>
+    <li class="inline">
+      <a href="/contact" class="tracking-wide text-sm sm:text-lg uppercase font-semibold text-gray-800{% if page_title == 'Contact' %} active{% endif %}">
+        contact
+      </a>
+    </li>
+  </ul>
 </nav>
