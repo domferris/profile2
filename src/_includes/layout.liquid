@@ -2,10 +2,10 @@
 <html lang="en">
 {% include partials/head.html %}
 
-<body>
+<body class="bg-white">
   <main class="flex flex-col h-screen">
     {% include partials/nav.html %}
-    <div class="flex-grow h-full p-4">
+    <div class="flex-grow h-full">
       {{ content | safe }}
     </div>
     {% include partials/footer.html %}
