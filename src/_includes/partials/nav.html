@@ -7,8 +7,13 @@
     <!-- Right side -->
     <ul class="flex mx-auto space-x-8 sm:pl-20 md:space-x-6 flex-nowrap sm:m-0">
       <li>
-        <a href="/projects/web" class="text-sm font-semibold tracking-wide text-gray-800 uppercase transition-all duration-200 ease-in-out hover:text-gray-600 sm:text-lg">
-          Projects
+        <a href="/web" class="text-sm font-semibold tracking-wide text-gray-800 uppercase transition-all duration-200 ease-in-out hover:text-gray-600 sm:text-lg">
+          Web
+        </a>
+      </li>
+      <li>
+        <a href="/art/film" class="text-sm font-semibold tracking-wide text-gray-800 uppercase transition-all duration-200 ease-in-out hover:text-gray-600 sm:text-lg">
+          Art
         </a>
       </li>
       <li>
@@ -25,30 +30,23 @@
   </div>
 </nav>
 <!-- Projects nav -->
-{% if page_title == 'Projects' %}
+{% if page_title == 'Art' %}
 <nav class="z-50 bg-gray-800">
   <div class="flex justify-between max-w-6xl mx-auto">
-    <!-- Web Development -->
-    <a href="/projects/web" class="block w-full p-4 text-center text-gray-200 mt-1 border-b-8 border-transparent{% if page_name == "web"%} border-gray-100{% endif %}">
+    <!-- Filmmakking -->
+    <a href="/art/film" class="block w-full p-4 text-center text-gray-200 mt-1 border-b-8 border-transparent{% if page_name == "film"%} border-gray-100{% endif %}">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6 mx-auto sm:w-10 sm:h-10">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
       </svg>
-      <span class="inline-block mt-1.5">Web<span class="hidden sm:contents"> Development</span></span>
+      <span class="inline-block mt-1.5">Film<span class="hidden sm:contents">making</span></span>
     </a>
     <!-- Photography -->
-    <a href="/projects/photo" class="block w-full p-4 text-center text-gray-200 mt-1 border-b-8 border-transparent{% if page_name == "photo"%} border-gray-100{% endif %}">
+    <a href="/art/photo" class="block w-full p-4 text-center text-gray-200 mt-1 border-b-8 border-transparent{% if page_name == "photo"%} border-gray-100{% endif %}">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6 mx-auto sm:w-10 sm:h-10">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" />
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 13a3 3 0 11-6 0 3 3 0 016 0z" />
       </svg>
       <span class="inline-block mt-1.5">Photo<span class="hidden sm:contents">graphy</span></span>
-    </a>
-    <!-- Filmmakking -->
-    <a href="/projects/film" class="block w-full p-4 text-center text-gray-200 mt-1 border-b-8 border-transparent{% if page_name == "film"%} border-gray-100{% endif %}">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6 mx-auto sm:w-10 sm:h-10">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
-      </svg>
-      <span class="inline-block mt-1.5">Film<span class="hidden sm:contents">making</span></span>
     </a>
   </div>
 </nav>
