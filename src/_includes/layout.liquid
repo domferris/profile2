@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 {% include partials/head.html %}
+<body class="bg-gradient-to-r from-gray-100 via-gray-50 to-gray-100">
+  <div class="flex flex-col min-h-screen">
 
-<body class="bg-white">
-  <main class="flex flex-col h-screen">
-    {% include partials/nav.html %}
-    <div class="flex-grow">
+    {% if page_title == "Home" %}
+      <header class="relative">
+        <img src="../img/about-01.png" alt="" class="object-cover h-64 min-w-full md:h-auto">
+      </header>
+    {% endif %}
+    
+    <main class="flex {% if page_title == "Home" %} flex-col {% endif %} h-full md:flex-row">
+      {% include partials/nav.html %}
       {{ content | safe }}
-    </div>
-    {% include partials/footer.html %}
-  </main>
+    </main>
+  </div>
 </body>
-
 </html>
