@@ -5,12 +5,12 @@
   <div class="flex flex-col min-h-screen">
 
     {% if page_title == "Home" %}
-      <header class="relative">
+      <header>
         <img src="../img/about-01.png" alt="" class="object-cover h-64 min-w-full md:h-auto">
       </header>
     {% endif %}
     
-    <main class="flex {% if page_title == "Home" %} flex-col {% endif %} h-full md:flex-row">
+    <main class="flex{% if page_title == "Home" %} flex-col{% endif %} flex-grow md:flex-row">
       {% include partials/nav.html %}
       {{ content | safe }}
     </main>
