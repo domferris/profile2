@@ -1,54 +1,29 @@
-<!-- Main nav -->
-<nav class="z-50 shadow-sm bg-gray-50">
-  <div class="flex flex-col items-center justify-between max-w-6xl p-4 mx-auto sm:flex-row">
-    <!-- Left side -->
-    <a class="mx-auto sm:m-0" href="/"><span class="inline-block text-3xl font-extrabold tracking-wider text-gray-800 uppercase sm:text-4xl">Dominic Ferris</span></a>
-
-    <!-- Right side -->
-    <ul class="flex mx-auto space-x-8 sm:pl-20 md:space-x-6 flex-nowrap sm:m-0">
-      <li>
-        <a href="/web" class="text-sm font-semibold tracking-wide text-gray-800 uppercase transition-all duration-200 ease-in-out hover:text-gray-600 sm:text-lg">
-          Web
-        </a>
-      </li>
-      <li>
-        <a href="/art/film" class="text-sm font-semibold tracking-wide text-gray-800 uppercase transition-all duration-200 ease-in-out hover:text-gray-600 sm:text-lg">
-          Art
-        </a>
-      </li>
-      <li>
-        <a href="/about" class="text-sm font-semibold tracking-wide text-gray-800 uppercase transition-all duration-200 ease-in-out hover:text-gray-600 sm:text-lg">
-          About
-        </a>
-      </li>
-      <li>
-        <a href="/contact" class="text-sm font-semibold tracking-wide text-gray-800 uppercase transition-all duration-200 ease-in-out hover:text-gray-600 sm:text-lg">
-          Contact
-        </a>
-      </li>
-    </ul>
-  </div>
-</nav>
-
-<!-- Art nav -->
-{% if page_title == 'Art' %}
-<nav class="z-50 bg-gray-800">
-  <div class="flex justify-between max-w-6xl mx-auto">
-    <!-- Filmmakking -->
-    <a href="/art/film" class="block w-full p-4 text-center text-gray-200 mt-1 border-b-8 border-transparent{% if page_name == "film"%} border-gray-100{% endif %}">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6 mx-auto sm:w-10 sm:h-10">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
-      </svg>
-      <span class="inline-block mt-1.5">Film<span class="hidden sm:contents">making</span></span>
+<nav class="flex flex-col{% if page_title == "Home" %} p-4 sm:p-8 space-y-2 order-2 md:order-1 w-full{% else %} w-12 order-1 justify-center space-y-16{% endif %}">
+  {% if page_title == "Home" %}
+    <h3 class="mt-2 mb-4 text-3xl">
+      Where to?
+    </h3>
+  {% else %}
+    <a class="text-lg font-bold transform -rotate-90 whitespace-nowrap" href="/">
+        Dom Ferris
     </a>
-    <!-- Photography -->
-    <a href="/art/photo" class="block w-full p-4 text-center text-gray-200 mt-1 border-b-8 border-transparent{% if page_name == "photo"%} border-gray-100{% endif %}">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6 mx-auto sm:w-10 sm:h-10">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" />
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 13a3 3 0 11-6 0 3 3 0 016 0z" />
-      </svg>
-      <span class="inline-block mt-1.5">Photo<span class="hidden sm:contents">graphy</span></span>
-    </a>
-  </div>
+  {% endif %}
+
+  <span class="inline-block h-px bg-black{% if page_title == "Home" %} mb-1 w-28{% else %} w-0 transform -rotate-90{% endif %}"></span>
+
+  <a class="whitespace-nowrap text-sm{% if page_title == "Home" %}{% else %} transform -rotate-90{% endif %}" href="/projects">
+    My projects
+  </a>
+  
+  <span class="inline-block h-px bg-black{% if page_title == "Home" %} mb-1 w-28{% else %} w-0 transform -rotate-90{% endif %}"></span>
+
+  <a class="whitespace-nowrap text-sm{% if page_title == "Home" %}{% else %} transform -rotate-90{% endif %}" href="/info">
+    Learn more
+  </a>
+  
+  <span class="inline-block h-px bg-black{% if page_title == "Home" %} mb-1 w-28{% else %} w-0 transform -rotate-90{% endif %}"></span>
+
+  <a class="whitespace-nowrap text-sm{% if page_title == "Home" %}{% else %} transform -rotate-90{% endif %}" href="/contact">
+    Contact me
+  </a>
 </nav>
-{% endif %}
