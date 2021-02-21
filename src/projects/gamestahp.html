@@ -1,0 +1,49 @@
+---
+layout: layout.liquid
+page_title: Gamestahp
+---
+
+<section class="flex-grow order-2">
+  <div class="flex flex-col items-center pr-4">
+    <div class="max-w-7xl">
+      <img src="../../img/projects/gamestahp-home.png" alt="GameStahp homepage banner">
+
+      <div class="flex flex-col justify-between px-6 py-12 md:flex-row">
+        <div class="mb-8">
+          <h3 class="mb-4 text-4xl">
+            GameStahp
+          </h3>
+          <div class="h-1 bg-gray-800 w-60"></div>
+          <a class="text-red-600 transition-colors duration-200 hover:text-red-800" href="https://gamestahp.xyz/" target="_blank">gamestahp.xyz</a>
+        </div>
+        <div class="w-5/6 space-y-6 md:pl-2 md:w-2/4">
+          <p class="leading-relaxed">
+            GameStahp is my ongoing personal playground application for small, browser-based games. I wanted to build out a site that anyone could visit to play their favorite nostalgic games anytime, anywhere.
+          </p>
+          <p class="leading-relaxed">
+            My intention with this project is to build out games one by one. My next goal, after working out the known bugs and building out a level generator for Brick Breaker, is to add a high score system so that players can track their progress in the old-school arcade way with their three initials.
+          </p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+        <img class="lg:col-span-1" src="../../img/projects/gamestahp-snake.png" alt="Snake game preview">
+        <img class="lg:col-span-1" src="../../img/projects/gamestahp-brickbreaker.png" alt="Brick Breaker game preview">
+        <img class="lg:col-span-1 md:col-span-2" src="../../img/projects/gamestahp-minesweeper.png" alt="Minesweeper preview">
+      </div>
+
+      <div class="flex justify-start px-6 py-12 md:justify-end">
+        <div class="w-5/6 space-y-6 md:pl-2 md:w-2/4">
+          <p class="leading-relaxed">
+            The art direction for the site is a mixture of old-school arcade cabinets and a shameless parody of GameStop. Each game's design was inspired by my first encounter with them -- Snake from the old Nokia phones my older cousins had, Brick Breaker from the original GameBoy, and Minesweeper from my old Windows computer. There are instructions and rules for each.
+          </p>
+          <p class="leading-relaxed">
+            After ensuring each of the existing games work well enough to play from start to game over, high score will be in the works. I have built out the initial API with Ruby on Rails but have not implemented it just yet because the games are riddled with bugs. I plan on adding Tetris next as well as building out a "remote control" that takes in player inputs via keyboard and adjusts per game.
+          </p>
+        </div>
+      </div>
+
+      <img class="w-full" src="../../img/projects/gamestahp-minesweeper-info.png" alt="Minesweeper rules and instructions">
+    </div>
+  </div>
+</section>
