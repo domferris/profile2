@@ -5,6 +5,8 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addPassthroughCopy("./src/img/projects/");
   eleventyConfig.addPassthroughCopy("./src/img/photography/");
 
+  eleventyConfig.addPassthroughCopy("./src/js/");
+
   return {
     dir: {
       input: "src",
