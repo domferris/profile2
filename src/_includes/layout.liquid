@@ -12,7 +12,9 @@
     
     <main class="flex{% if page_title == "Home" %} flex-col{% endif %} flex-grow md:flex-row">
       {% include partials/nav.html %}
-      {{ content | safe }}
+      <div class="{% if page_title == "Home" %} md:order-2 order-1 {% else %} flex-grow order-2{% endif %}" data-barba="wrapper">
+        {{ content | safe }}
+      </div>
     </main>
   </div>
 </body>
