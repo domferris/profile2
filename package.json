@@ -2,7 +2,6 @@
   "name": "profile2",
   "version": "1.0.0",
   "description": "Dominic's profile",
-  "main": "index.js",
   "scripts": {
     "build": "cross-env NODE_ENV=production npm-run-all clean -p build:*",
     "build:eleventy": "eleventy",
@@ -22,12 +21,12 @@
     "url": "https://github.com/domferris/profile2/issues"
   },
   "dependencies": {
-    "@barba/css": "^2.1.15",
     "alpinejs": "^2.8.0"
   },
   "devDependencies": {
     "@11ty/eleventy": "^0.11.0",
     "@barba/core": "^2.9.7",
+    "@barba/css": "^2.1.15",
     "@tailwindcss/forms": "^0.2.1",
     "autoprefixer": "^10.1.0",
     "cross-env": "^7.0.2",
