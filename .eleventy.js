@@ -1,15 +1,19 @@
 module.exports = (eleventyConfig) => {
-  eleventyConfig.addPassthroughCopy("./src/styles/styles.css");
-
   eleventyConfig.addPassthroughCopy("./src/img/*.png");
   eleventyConfig.addPassthroughCopy("./src/img/projects/");
   eleventyConfig.addPassthroughCopy("./src/img/photography/");
 
-  eleventyConfig.addPassthroughCopy("./src/js/");
+  eleventyConfig.setBrowserSyncConfig({
+    files: ["_site/**/*"],
+    open: true,
+  });
+
+  eleventyConfig.setDataDeepMerge(true);
 
   return {
     dir: {
       input: "src",
+      output: "_site",
     },
   };
 };

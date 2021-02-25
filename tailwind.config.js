@@ -1,9 +1,5 @@
 module.exports = {
-  purge: [],
   darkMode: false,
-  theme: {
-    extend: {},
-  },
-  variants: {},
-  plugins: [],
+  plugins: [require("@tailwindcss/forms"), require("tailwindcss-debug-screens")],
+  purge: ["./src/**/*.js", "./src/**/*.html"],
 };
