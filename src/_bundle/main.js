@@ -8,8 +8,20 @@ barba.use(barbaCss);
 barba.init({
   transitions: [
     {
-      name: "home",
-      once: () => {},
+      name: "fade",
+      to: {
+        namespace: [
+          "home",
+          "projects",
+          "info",
+          "contact",
+          "reele",
+          "archive",
+          "gamestahp",
+        ],
+      },
+      leave() {},
+      enter() {},
     },
   ],
 });
