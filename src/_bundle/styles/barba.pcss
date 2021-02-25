@@ -1,11 +1,23 @@
-.home-once {
+.fade-leave {
+  opacity: 1;
+}
+
+.fade-leave-active {
+  transition: opacity 0.25s linear;
+}
+
+.fade-leave-to {
   opacity: 0;
 }
 
-.home-once-active {
-  transition: opacity 1s linear;
+.fade-enter {
+  opacity: 0;
 }
 
-.home-once-to {
+.fade-enter-active {
+  transition: opacity 0.8s linear;
+}
+
+.fade-enter-to {
   opacity: 1;
 }
