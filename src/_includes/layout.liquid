@@ -2,20 +2,11 @@
 <html lang="en">
 {% include partials/head.html %}
 <body class="bg-gradient-to-r from-gray-100 via-gray-50 to-gray-100 {{ 'debug-screens' if env.devMode }}">
-  <div class="flex flex-col min-h-screen">
-
-    {% if page_title == "Home" %}
-      <header>
-        <img src="../img/home.png" alt="" class="object-cover h-64 min-w-full md:h-auto">
-      </header>
-    {% endif %}
-    
-    <main class="flex{% if page_title == "Home" %} flex-col{% endif %} flex-grow md:flex-row">
-      {% include partials/nav.html %}
-      <div class="{% if page_title == "Home" %} md:order-2 order-1 {% else %} flex-grow order-2{% endif %}" data-barba="wrapper">
-        {{ content | safe }}
-      </div>
-    </main>
-  </div>
+  <main class="flex">
+    {% include partials/nav.html %}
+    <div class="flex-grow order-2" data-barba="wrapper">
+      {{ content | safe }}
+    </div>
+  </main>
 </body>
 </html>

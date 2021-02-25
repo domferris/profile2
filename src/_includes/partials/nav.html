@@ -1,29 +1,17 @@
-<nav class="flex flex-col{% if page_title == "Home" %} p-4 sm:p-8 space-y-2 order-2 md:order-1 w-2/4{% else %} sticky h-screen w-12 order-1 justify-center space-y-16{% endif %}">
-  {% if page_title == "Home" %}
-    <h3 class="mt-2 mb-4 text-3xl text-gray-800">
-      Where to?
-    </h3>
-  {% else %}
-    <a class="text-lg font-bold text-gray-800 transform -rotate-90 whitespace-nowrap" href="/">
-        Dom Ferris
-    </a>
-  {% endif %}
-
-  <span class="inline-block h-px bg-gray-800{% if page_title == "Home" %} mb-1 w-28{% else %} w-0 transform -rotate-90{% endif %}"></span>
-
-  <a class="text-gray-800 whitespace-nowrap text-sm{% if page_title == "Home" %} w-28{% else %} transform -rotate-90{% endif %}" href="/projects">
+<nav class="sticky flex flex-col justify-between order-1 w-12 h-screen">
+  <a class="text-lg font-bold text-gray-800 transform -rotate-90 whitespace-nowrap" href="/">
+      Dom Ferris
+  </a>
+    
+  <a class="text-sm text-gray-800 transform -rotate-90 whitespace-nowrap" href="/projects">
     My projects
   </a>
-  
-  <span class="inline-block h-px bg-gray-800{% if page_title == "Home" %} mb-1 w-28{% else %} w-0 transform -rotate-90{% endif %}"></span>
 
-  <a class="text-gray-800 whitespace-nowrap text-sm{% if page_title == "Home" %} w-28{% else %} transform -rotate-90{% endif %}" href="/info">
+  <a class="text-sm text-gray-800 transform -rotate-90 whitespace-nowrap" href="/info">
     Learn more
   </a>
   
-  <span class="inline-block h-px bg-gray-800{% if page_title == "Home" %} mb-1 w-28{% else %} w-0 transform -rotate-90{% endif %}"></span>
-
-  <a class="text-gray-800 whitespace-nowrap text-sm{% if page_title == "Home" %} w-28{% else %} transform -rotate-90{% endif %}" href="/contact">
+  <a class="text-sm text-gray-800 transform -rotate-90 whitespace-nowrap" href="/contact">
     Contact me
   </a>
 </nav>
