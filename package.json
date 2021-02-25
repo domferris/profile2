@@ -20,6 +20,7 @@
   "bugs": {
     "url": "https://github.com/domferris/profile2/issues"
   },
+  "homepage": "https://github.com/domferris/profile2#readme",
   "dependencies": {
     "alpinejs": "^2.8.0"
   },

@@ -13,5 +13,3 @@ barba.init({
     },
   ],
 });
-
-console.log("fucking finally");
