@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 {% include partials/head.html %}
-<body class="bg-gradient-to-r from-gray-100 via-gray-50 to-gray-100 {{ 'debug-screens' if env.devMode }}">
+<body {% if env.devMode %}class="debug-screens"{% endif %}>
   <main class="flex">
     {% include partials/nav.html %}
     <div class="flex-grow order-2" data-barba="wrapper">
