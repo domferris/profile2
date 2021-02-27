@@ -17,7 +17,7 @@ barba.init({
     {
       name: "fade",
       to: {
-        namespace: ["home", "projects", "info", "contact", "project"],
+        namespace: ["home", "projects", "experience", "info", "contact", "project"],
       },
       leave() {},
       enter() {},
