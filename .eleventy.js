@@ -1,5 +1,6 @@
 module.exports = (eleventyConfig) => {
   eleventyConfig.addPassthroughCopy("./src/img/*.png");
+  eleventyConfig.addPassthroughCopy("./src/img/*.jpg");
   eleventyConfig.addPassthroughCopy("./src/img/projects/");
   eleventyConfig.addPassthroughCopy("./src/img/photography/");
 
