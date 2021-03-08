@@ -3,6 +3,13 @@ import "./main.pcss";
 import barba from "barba";
 import barbaCss from "barbaCss";
 
+// Add margin-left to main content for fixed nav
+const nav = document.querySelector("nav");
+const navWidth = nav.clientWidth;
+const content = document.getElementById("content");
+content.style.marginLeft = `${navWidth}px`;
+
+// barba.js page transitions
 barba.use(barbaCss);
 
 const main = document.querySelector("main");
