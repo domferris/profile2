@@ -4,7 +4,7 @@ import barba from "barba";
 import barbaCss from "barbaCss";
 
 // Add margin-left to main content for fixed nav
-const mainNav = document.querySelector("main-nav");
+const mainNav = document.getElementById("main-nav");
 const mainNavWidth = mainNav.clientWidth;
 const content = document.getElementById("content");
 content.style.marginLeft = `${mainNavWidth}px`;
