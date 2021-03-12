@@ -39,7 +39,17 @@
   </button>
   
   <!-- Mobile nav items -->
-  <div class="fixed flex flex-col justify-center w-full h-full pb-20 text-center transform bg-true-gray-50" id="mobile-nav" x-show="isOpen">
+  <div 
+    class="fixed flex flex-col justify-center w-full h-full pb-20 text-center transform bg-true-gray-50"
+    id="mobile-nav"
+    x-show="isOpen"
+    x-transition:enter="transition ease-out duration-200"
+    x-transition:enter-start="opacity-0"
+    x-transition:enter-end="opacity-100"
+    x-transition:leave="transition ease-out duration-150 delay-75"
+    x-transition:leave-start="opacity-100"
+    x-transition:leave-end="opacity-0"
+  >
     <a class="p-2 mx-auto mb-4 text-xl font-semibold text-true-gray-800 whitespace-nowrap" @click="isOpen = !isOpen" href="/">
       dom ferris
     </a>
