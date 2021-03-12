@@ -7,13 +7,13 @@ import barbaCss from "barbaCss";
 const mainNav = document.getElementById("main-nav");
 let mainNavWidth = mainNav.clientWidth;
 const content = document.getElementById("content");
+const smBreakpoint = 640; // Tailwind sm breakpoint in px
 
 // On page load, mainNav is either there or hidden
 content.style.marginLeft = `${mainNavWidth}px`;
 
 // Add/remove content margin if window is resized
 window.addEventListener("resize", (event) => {
-  const smBreakpoint = 640; // Tailwind sm breakpoint in px
   mainNavWidth = mainNav.clientWidth;
 
   window.innerWidth >= smBreakpoint
@@ -24,8 +24,9 @@ window.addEventListener("resize", (event) => {
 // barba.js page transitions
 barba.use(barbaCss);
 
+const main = document.querySelector("main");
+
 barba.hooks.before((data) => {
-  const main = document.querySelector("main");
   const background = data.next.container.dataset.background;
 
   main.style.setProperty("--page-background", background);
