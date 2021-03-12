@@ -12,16 +12,16 @@
   <script src="/assets/main.bundle.js" defer></script>
 </head>
 <body >
-  <main class="flex">
-    <nav class="fixed flex flex-col justify-center h-screen bg-true-gray-50">
-  <a class="p-4 text-base font-bold text-center text-true-gray-800 bg-true-gray-50 whitespace-nowrap" href="/">
-      <svg class="inline-block w-6 transform rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" />
-      </svg>
-  
-      <svg class="inline-block w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" />
-      </svg>
+  <main class="sm:flex">
+    <!-- Main nav -->
+<nav class="fixed flex-col justify-center hidden h-screen sm:flex sm:visible bg-true-gray-50" id="main-nav">
+  <a class="p-1 mx-auto mb-4 text-true-gray-800" href="/">
+    <svg class="inline-block w-6 transform rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="square" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" />
+    </svg>
+    <svg class="inline-block w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="square" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" />
+    </svg>
   </a>
   
   <a class="p-4 text-sm text-true-gray-800 bg-true-gray-100 whitespace-nowrap" href="/projects">
@@ -40,6 +40,43 @@
     Contact me
   </a>
 </nav>
+
+<!-- Mobile nav -->
+<nav class="fixed z-50 w-full sm:hidden bg-true-gray-50" x-data="{ isOpen: false }">
+  <!-- Mobile nav toggle -->
+  <button class="block p-2 mx-auto text-true-gray-800" id="mobile-nav-toggle" @click="isOpen = !isOpen">
+    <svg class="inline-block w-6 transform rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="square" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" />
+    </svg>
+    <svg class="inline-block w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="square" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" />
+    </svg>
+  </button>
+  
+  <!-- Mobile nav items -->
+  <div class="fixed flex flex-col justify-center w-full h-full pb-20 text-center transform bg-true-gray-50" id="mobile-nav" x-show="isOpen">
+    <a class="p-2 mx-auto mb-4 text-xl font-semibold text-true-gray-800 whitespace-nowrap" @click="isOpen = !isOpen" href="/">
+      dom ferris
+    </a>
+    
+    <a class="p-4 text-sm text-true-gray-800 bg-true-gray-100 whitespace-nowrap" @click="isOpen = !isOpen" href="/projects">
+      My projects
+    </a>
+  
+    <a class="p-4 text-sm text-true-gray-800 bg-true-gray-300 whitespace-nowrap" @click="isOpen = !isOpen" href="/experience">
+      Experience
+    </a>
+    
+    <a class="p-4 text-sm text-true-gray-100 bg-true-gray-800 whitespace-nowrap" @click="isOpen = !isOpen" href="/info">
+      Learn more
+    </a>
+  
+    <a class="p-4 text-sm bg-true-gray-900 text-true-gray-100 whitespace-nowrap" @click="isOpen = !isOpen" href="/contact">
+      Contact me
+    </a>
+  </div>
+</nav>
+
     <div class="flex-grow" data-barba="wrapper" id="content">
       
 <section class="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2" data-barba="container" data-barba-namespace="photo">
