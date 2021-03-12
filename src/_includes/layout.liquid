@@ -2,7 +2,7 @@
 <html lang="en">
 {% include partials/head.html %}
 <body {% if env.devMode %}class="debug-screens"{% endif %}>
-  <main class="flex">
+  <main class="sm:flex">
     {% include partials/nav.html %}
     <div class="flex-grow" data-barba="wrapper" id="content">
       {{ content | safe }}

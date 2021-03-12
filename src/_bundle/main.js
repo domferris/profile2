@@ -4,10 +4,24 @@ import barba from "barba";
 import barbaCss from "barbaCss";
 
 // Add margin-left to main content for fixed nav
-const nav = document.querySelector("nav");
-const navWidth = nav.clientWidth;
+const mainNav = document.getElementById("main-nav");
+const mainNavWidth = mainNav.clientWidth;
 const content = document.getElementById("content");
-content.style.marginLeft = `${navWidth}px`;
+
+// On page load, mainNav is either there or hidden
+content.style.marginLeft = `${mainNavWidth}px`;
+
+// Add/remove content margin if window is resized
+window.addEventListener("resize", (event) => {
+  const mainNavWidth = mainNav.clientWidth;
+  const smBreakpoint = 640; // Tailwind sm breakpoint in px
+
+  if (window.innerWidth >= smBreakpoint) {
+    content.style.marginLeft = `${mainNavWidth}px`;
+  } else if (window.innerWidth < smBreakpoint) {
+    content.style.marginLeft = "0px";
+  }
+});
 
 // barba.js page transitions
 barba.use(barbaCss);
