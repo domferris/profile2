@@ -5,22 +5,20 @@ import barbaCss from "barbaCss";
 
 // Add margin-left to main content for fixed nav
 const mainNav = document.getElementById("main-nav");
-const mainNavWidth = mainNav.clientWidth;
+let mainNavWidth = mainNav.clientWidth;
 const content = document.getElementById("content");
+const smBreakpoint = 640; // Tailwind sm breakpoint in px
 
 // On page load, mainNav is either there or hidden
 content.style.marginLeft = `${mainNavWidth}px`;
 
 // Add/remove content margin if window is resized
 window.addEventListener("resize", (event) => {
-  const mainNavWidth = mainNav.clientWidth;
-  const smBreakpoint = 640; // Tailwind sm breakpoint in px
+  mainNavWidth = mainNav.clientWidth;
 
-  if (window.innerWidth >= smBreakpoint) {
-    content.style.marginLeft = `${mainNavWidth}px`;
-  } else if (window.innerWidth < smBreakpoint) {
-    content.style.marginLeft = "0px";
-  }
+  window.innerWidth >= smBreakpoint
+    ? (content.style.marginLeft = `${mainNavWidth}px`)
+    : (content.style.marginLeft = "0px");
 });
 
 // barba.js page transitions
@@ -30,13 +28,20 @@ const main = document.querySelector("main");
 
 barba.hooks.before((data) => {
   const background = data.next.container.dataset.background;
+
   main.style.setProperty("--page-background", background);
 });
+
+let transitionName = "";
+
+window.innerWidth >= smBreakpoint
+  ? (transitionName = "fade-transition")
+  : (transitionName = "fade-in");
 
 barba.init({
   transitions: [
     {
-      name: "fade",
+      name: transitionName,
       to: {
         namespace: ["home", "projects", "experience", "info", "contact", "project"],
       },
@@ -44,4 +49,5 @@ barba.init({
       enter() {},
     },
   ],
+  preventRunning: true,
 });
