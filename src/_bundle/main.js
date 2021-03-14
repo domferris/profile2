@@ -32,16 +32,10 @@ barba.hooks.before((data) => {
   main.style.setProperty("--page-background", background);
 });
 
-let transitionName = "";
-
-window.innerWidth >= smBreakpoint
-  ? (transitionName = "fade-transition")
-  : (transitionName = "fade-in");
-
 barba.init({
   transitions: [
     {
-      name: transitionName,
+      name: "fade-in",
       to: {
         namespace: ["home", "projects", "experience", "info", "contact", "project"],
       },

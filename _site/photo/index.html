@@ -8,6 +8,9 @@
     Dominic Ferris - Photography
   </title>
 
+  <!-- Fontawesome Stylesheet -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+  
   <link rel="stylesheet" href="/assets/main.bundle.css">
   <script src="/assets/main.bundle.js" defer></script>
 </head>
@@ -54,7 +57,17 @@
   </button>
   
   <!-- Mobile nav items -->
-  <div class="fixed flex flex-col justify-center w-full h-full pb-20 text-center transform bg-true-gray-50" id="mobile-nav" x-show="isOpen">
+  <div 
+    class="fixed flex flex-col justify-center w-full h-full pb-20 text-center transform bg-true-gray-50"
+    id="mobile-nav"
+    x-show="isOpen"
+    x-transition:enter="transition ease-out duration-200"
+    x-transition:enter-start="opacity-0"
+    x-transition:enter-end="opacity-100"
+    x-transition:leave="transition ease-out duration-100 delay-150"
+    x-transition:leave-start="opacity-100"
+    x-transition:leave-end="opacity-0"
+  >
     <a class="p-2 mx-auto mb-4 text-xl font-semibold text-true-gray-800 whitespace-nowrap" @click="isOpen = !isOpen" href="/">
       dom ferris
     </a>
