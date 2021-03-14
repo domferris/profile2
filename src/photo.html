@@ -5,7 +5,16 @@ page_title: Photography
 
 <section class="relative min-h-screen" data-barba="container" data-barba-namespace="photo" x-data="{ isOpen: false }">
   <!-- Photo whitebox -->
-  <div class="absolute top-0 z-20 flex items-center justify-center w-full h-screen" x-show="isOpen">
+  <div
+    class="absolute top-0 z-20 flex items-center justify-center w-full h-screen"
+    x-show="isOpen"
+    x-transition:enter="transition ease-out duration-300"
+    x-transition:enter-start="opacity-0"
+    x-transition:enter-end="opacity-100"
+    x-transition:leave="transition ease-out duration-300"
+    x-transition:leave-start="opacity-100"
+    x-transition:leave-end="opacity-0"
+  >
     <div class="fixed p-12">
       <!-- Whitebox close button -->
       <svg
@@ -28,7 +37,16 @@ page_title: Photography
     </div>
   </div>
   <!-- White bg -->
-  <div class="absolute top-0 left-0 z-10 w-full h-full bg-true-gray-50 opacity-90" x-show="isOpen" @click="isOpen = false"></div>
+  <div
+    class="absolute top-0 left-0 z-10 w-full h-full bg-true-gray-50 bg-opacity-90"
+    x-show="isOpen"
+    x-transition:enter="transition ease-out duration-200"
+    x-transition:enter-start="opacity-0 bg-true-gray-50"
+    x-transition:enter-end="opacity-100 bg-true-gray-50"
+    x-transition:leave="transition ease-out duration-500 delay-100"
+    x-transition:leave-start="opacity-100 bg-true-gray-50"
+    x-transition:leave-end="opacity-0 bg-true-gray-50"
+  ></div>
   
   <!-- Photos grid -->
   <div class="grid grid-cols-1 2xl:grid-cols-5 lg:grid-cols-3 xl:grid-cols-4 md:grid-cols-2">
