@@ -4,7 +4,7 @@
 <body {% if env.devMode %}class="debug-screens"{% endif %}>
   <main class="sm:flex">
     {% include partials/nav.html %}
-    <div class="flex-grow" data-barba="wrapper" id="content">
+    <div class="flex-grow" id="content">
       {{ content | safe }}
     </div>
   </main>

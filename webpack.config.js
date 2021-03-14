@@ -21,10 +21,4 @@ module.exports = {
       filename: "main.bundle.css",
     }),
   ],
-  resolve: {
-    alias: {
-      barba: path.resolve("node_modules", "@barba/core/dist/barba.js"),
-      barbaCss: path.resolve("node_modules", "@barba/css/dist/barba-css.js"),
-    },
-  },
 };

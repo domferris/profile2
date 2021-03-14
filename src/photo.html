@@ -3,7 +3,7 @@ layout: layout.liquid
 page_title: Photography
 ---
 
-<section class="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2" data-barba="container" data-barba-namespace="photo">
+<section class="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2">
   {% for photo in photography %}
     <div class="h-80">
       <img src="../img/photography/{{ photo.filename }}" alt="{{ photo.alt_text }}" class="object-cover w-full h-full">
