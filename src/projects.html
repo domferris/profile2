@@ -3,83 +3,43 @@ layout: layout.liquid
 page_title: Projects
 ---
 
-<section class="flex flex-col items-center min-h-full bg-true-gray-100" data-barba="container" data-barba-namespace="projects" data-background="#F5F5F5">
-  <div class="max-w-4xl space-y-20 px-14 py-14 md:py-24 xl:max-w-6xl">
-    <div>
-      <h3 class="mb-12 text-4xl md:mb-16">
-        Selected projects
-      </h3>
-      <div class="mx-4 space-y-10 md:mx-8 md:space-y-16">
-        <div class="flex flex-col justify-between md:flex-row">
-          <a class="mb-4 text-xl font-semibold" href="/projects/reele">
+<section class="flex flex-col items-center min-h-screen bg-true-gray-100">
+  <div class="grid max-w-4xl min-h-screen grid-cols-1 sm:pt-8 pt-11 sm:p-8 xl:max-w-6xl">
+    <div class="flex flex-col max-w-3xl mx-8 mt-8 mb-4 md:mt-auto">
+      <a class="h-full" href="/projects/reele">
+        <img class="object-cover object-left w-full h-full" src="../img/projects/reele-home-thumb.png" alt="">
+      </a>
+      <div class="px-2 mt-4 space-y-2">
+        <div class="flex justify-between">
+          <a class="text-xl font-semibold md:text-2xl" href="/projects/reele">
             Reele
           </a>
-          <p class="w-full text-sm md:w-2/4">
-            Reele is a prototype application for audio professionals to showcase their work and connect with other audiophiles.
-          </p>
-        </div>
-        <div class="flex flex-col justify-between md:flex-row">
-          <a class="mb-4 text-xl font-semibold" href="/projects/gamestahp">
-            GameStahp
+          <a class="my-auto" href="https://github.com/domferris/reele" target="_blank">
+            <i class="text-xl md:text-2xl fab fa-github"></i>
           </a>
-          <p class="w-full text-sm md:w-2/4">
-            GameStahp is my ongoing personal playground application for small, browser-based games. Current games: Snake, Brick Breaker, Minesweeper
-          </p>
         </div>
-        <div class="flex flex-col justify-between md:flex-row">
-          <a class="mb-4 text-xl font-semibold" href="/projects/archive">
-            Portfolio Archive
-          </a>
-          <p class="w-full text-sm md:w-2/4">
-            I am constantly reinventing myself, trying out technologies, and exploring new ideas, design practices, etc. Take a gander at past portfolio sites to follow my growth.
-          </p>
-        </div>
+        <p class="text-sm md:text-base">
+          Reele is a prototype application for audio professionals to showcase their work and connect with other audiophiles.
+        </p>
       </div>
     </div>
-    <div>
-      <h3 class="mb-12 text-4xl md:mb-16">
-        Past work
-      </h3>
-      <div class="mx-4 space-y-10 md:mx-8 md:space-y-16">
-        <div class="flex flex-col justify-between md:flex-row">
-          <div class="mb-4">
-            <h5 class="text-lg font-semibold">
-              Page Bird
-            </h5>
-            <h6 class="text-sm">
-              Role: Web Developer
-            </h6>
-          </div>
-          <p class="w-full text-sm md:w-2/4">
-            I directly communicated with 26 of their clients, maintaining and updating their websites via Netlify. To respect the confidentiality of their customers, please reach out to learn more about my work with Page Bird.
-          </p>
+    
+    <div class="flex flex-col max-w-3xl mx-8 mt-4 mb-8 md:mb-auto">
+      <a class="h-full" href="/projects/gamestahp">
+        <img class="object-cover w-full h-full" src="../img/projects/gamestahp-home.png" alt="">
+      </a>
+      <div class="px-2 mt-4 space-y-2">
+        <div class="flex justify-between">
+          <a class="text-xl font-semibold md:text-2xl" href="/projects/gamestahp">
+            GameStahp
+          </a>
+          <a class="my-auto" href="https://github.com/domferris/gamestahp" target="_blank">
+            <i class="text-xl md:text-2xl fab fa-github"></i>
+          </a>
         </div>
-        <div class="flex flex-col justify-between md:flex-row">
-          <div class="mb-4">
-            <h5 class="text-lg font-semibold">
-              Pain Academy
-            </h5>
-            <h6 class="text-sm">
-              Role: Frontend Developer
-            </h6>
-          </div>
-          <p class="w-full text-sm md:w-2/4">
-            Pain Academy is an online movement program meant to evaluate and solve your health needs. Users have programs catered to their needs. I assisted in styling some of their users’ internal tools on WordPress.
-          </p>
-        </div>
-        <div class="flex flex-col justify-between md:flex-row">
-          <div class="mb-4">
-            <h5 class="text-lg font-semibold">
-              Spicy Green Book
-            </h5>
-            <h6 class="text-sm">
-              Role: Volunteer Developer
-            </h6>
-          </div>
-          <p class="w-full text-sm md:w-2/4">
-            Spicy Green Book is a nonprofit application committed to supporting Black owned businesses free of charge. I volunteer in creating and updating pages via Expo, communicating with the team through Slack and GitHub issues.
-          </p>
-        </div>
+        <p class="text-sm md:text-base">
+          GameStahp is my ongoing personal playground application for small, browser-based games. Current games: Snake, Brick Breaker, Minesweeper
+        </p>
       </div>
     </div>
   </div>
