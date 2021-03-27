@@ -59,7 +59,6 @@
   <!-- Mobile nav items -->
   <div 
     class="fixed flex flex-col justify-center w-full h-full pb-20 text-center transform bg-true-gray-50"
-    id="mobile-nav"
     x-show="isOpen"
     x-transition:enter="transition ease-out duration-200"
     x-transition:enter-start="opacity-0"
@@ -92,133 +91,211 @@
 
     <div class="flex-grow" data-barba="wrapper" id="content">
       
-<section class="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2" data-barba="container" data-barba-namespace="photo">
-  
-    <div class="h-80">
-      <img src="../img/photography/photography-01.jpg" alt="tbd" class="object-cover w-full h-full">
+<section class="relative min-h-screen" data-barba="container" data-barba-namespace="photo" x-data="{ isOpen: false }">
+  <!-- Photo whitebox -->
+  <div
+    class="absolute top-0 z-20 flex items-center justify-center w-full h-screen"
+    x-show="isOpen"
+    x-transition:enter="transition ease-out duration-300"
+    x-transition:enter-start="opacity-0"
+    x-transition:enter-end="opacity-100"
+    x-transition:leave="transition ease-out duration-300"
+    x-transition:leave-start="opacity-100"
+    x-transition:leave-end="opacity-0"
+  >
+    <div class="fixed p-12">
+      <!-- Whitebox close button -->
+      <svg
+        class="cursor-pointer absolute right-0.5 w-12 p-4 top-0.5 transition duration-200 hover:text-true-gray-500 text-true-gray-800"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 20 20"
+        fill="currentColor"
+        @click="isOpen = false"
+      >
+        <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd" />
+      </svg>
+
+      <!-- Photo -->
+      <img class="w-full h-full max-w-6xl max-h-screen" src="../img/photography/photography-01.jpg" alt="" @click.away="isOpen = false">
+
+      <!-- Photo title -->
+      <div class="absolute bottom-0.5 items-center left-0 flex h-12 ml-12">
+        <p class="text-sm" @click.stop>title of the photo</p>
+      </div>
     </div>
+  </div>
+  <!-- White bg -->
+  <div
+    class="absolute top-0 left-0 z-10 w-full h-full bg-true-gray-50 bg-opacity-90"
+    x-show="isOpen"
+    x-transition:enter="transition ease-out duration-200"
+    x-transition:enter-start="opacity-0 bg-true-gray-50"
+    x-transition:enter-end="opacity-100 bg-true-gray-50"
+    x-transition:leave="transition ease-out duration-500 delay-100"
+    x-transition:leave-start="opacity-100 bg-true-gray-50"
+    x-transition:leave-end="opacity-0 bg-true-gray-50"
+  ></div>
   
-    <div class="h-80">
-      <img src="../img/photography/photography-02.jpg" alt="tbd" class="object-cover w-full h-full">
-    </div>
-  
-    <div class="h-80">
-      <img src="../img/photography/photography-03.jpg" alt="tbd" class="object-cover w-full h-full">
-    </div>
-  
-    <div class="h-80">
-      <img src="../img/photography/photography-04.jpg" alt="tbd" class="object-cover w-full h-full">
-    </div>
-  
-    <div class="h-80">
-      <img src="../img/photography/photography-05.jpg" alt="tbd" class="object-cover w-full h-full">
-    </div>
-  
-    <div class="h-80">
-      <img src="../img/photography/photography-06.jpg" alt="tbd" class="object-cover w-full h-full">
-    </div>
-  
-    <div class="h-80">
-      <img src="../img/photography/photography-07.jpg" alt="tbd" class="object-cover w-full h-full">
-    </div>
-  
-    <div class="h-80">
-      <img src="../img/photography/photography-08.jpg" alt="tbd" class="object-cover w-full h-full">
-    </div>
-  
-    <div class="h-80">
-      <img src="../img/photography/photography-09.jpg" alt="tbd" class="object-cover w-full h-full">
-    </div>
-  
-    <div class="h-80">
-      <img src="../img/photography/photography-10.jpg" alt="tbd" class="object-cover w-full h-full">
-    </div>
-  
-    <div class="h-80">
-      <img src="../img/photography/photography-11.jpg" alt="tbd" class="object-cover w-full h-full">
-    </div>
-  
-    <div class="h-80">
-      <img src="../img/photography/photography-12.jpg" alt="tbd" class="object-cover w-full h-full">
-    </div>
-  
-    <div class="h-80">
-      <img src="../img/photography/photography-13.jpg" alt="tbd" class="object-cover w-full h-full">
-    </div>
-  
-    <div class="h-80">
-      <img src="../img/photography/photography-14.jpg" alt="tbd" class="object-cover w-full h-full">
-    </div>
-  
-    <div class="h-80">
-      <img src="../img/photography/photography-15.jpg" alt="tbd" class="object-cover w-full h-full">
-    </div>
-  
-    <div class="h-80">
-      <img src="../img/photography/photography-16.jpg" alt="tbd" class="object-cover w-full h-full">
-    </div>
-  
-    <div class="h-80">
-      <img src="../img/photography/photography-17.jpg" alt="tbd" class="object-cover w-full h-full">
-    </div>
-  
-    <div class="h-80">
-      <img src="../img/photography/photography-18.jpg" alt="tbd" class="object-cover w-full h-full">
-    </div>
-  
-    <div class="h-80">
-      <img src="../img/photography/photography-19.jpg" alt="tbd" class="object-cover w-full h-full">
-    </div>
-  
-    <div class="h-80">
-      <img src="../img/photography/photography-20.jpg" alt="tbd" class="object-cover w-full h-full">
-    </div>
-  
-    <div class="h-80">
-      <img src="../img/photography/photography-21.jpg" alt="tbd" class="object-cover w-full h-full">
-    </div>
-  
-    <div class="h-80">
-      <img src="../img/photography/photography-22.jpg" alt="tbd" class="object-cover w-full h-full">
-    </div>
-  
-    <div class="h-80">
-      <img src="../img/photography/photography-23.jpg" alt="tbd" class="object-cover w-full h-full">
-    </div>
-  
-    <div class="h-80">
-      <img src="../img/photography/photography-24.jpg" alt="tbd" class="object-cover w-full h-full">
-    </div>
-  
-    <div class="h-80">
-      <img src="../img/photography/photography-25.jpg" alt="tbd" class="object-cover w-full h-full">
-    </div>
-  
-    <div class="h-80">
-      <img src="../img/photography/photography-26.jpg" alt="tbd" class="object-cover w-full h-full">
-    </div>
-  
-    <div class="h-80">
-      <img src="../img/photography/photography-27.jpg" alt="tbd" class="object-cover w-full h-full">
-    </div>
-  
-    <div class="h-80">
-      <img src="../img/photography/photography-28.jpg" alt="tbd" class="object-cover w-full h-full">
-    </div>
-  
-    <div class="h-80">
-      <img src="../img/photography/photography-29.jpg" alt="tbd" class="object-cover w-full h-full">
-    </div>
-  
-    <div class="h-80">
-      <img src="../img/photography/photography-30.jpg" alt="tbd" class="object-cover w-full h-full">
-    </div>
-  
-    <div class="h-80">
-      <img src="../img/photography/photography-31.jpg" alt="tbd" class="object-cover w-full h-full">
-    </div>
-  
-  </section>
+  <!-- Photos grid -->
+  <div class="grid grid-cols-1 2xl:grid-cols-5 lg:grid-cols-3 xl:grid-cols-4 md:grid-cols-2">
+    
+      <div class="relative h-80" @click="isOpen = true">
+        <div class="absolute top-0 left-0 w-full h-full transition duration-300 bg-white opacity-0 hover:opacity-40"></div>
+        <img src="../img/photography/photography-01.jpg" alt="alt text for photo #01" class="object-cover w-full h-full">
+      </div>
+    
+      <div class="relative h-80" @click="isOpen = true">
+        <div class="absolute top-0 left-0 w-full h-full transition duration-300 bg-white opacity-0 hover:opacity-40"></div>
+        <img src="../img/photography/photography-02.jpg" alt="alt text for photo #02" class="object-cover w-full h-full">
+      </div>
+    
+      <div class="relative h-80" @click="isOpen = true">
+        <div class="absolute top-0 left-0 w-full h-full transition duration-300 bg-white opacity-0 hover:opacity-40"></div>
+        <img src="../img/photography/photography-03.jpg" alt="alt text for photo #03" class="object-cover w-full h-full">
+      </div>
+    
+      <div class="relative h-80" @click="isOpen = true">
+        <div class="absolute top-0 left-0 w-full h-full transition duration-300 bg-white opacity-0 hover:opacity-40"></div>
+        <img src="../img/photography/photography-04.jpg" alt="alt text for photo #04" class="object-cover w-full h-full">
+      </div>
+    
+      <div class="relative h-80" @click="isOpen = true">
+        <div class="absolute top-0 left-0 w-full h-full transition duration-300 bg-white opacity-0 hover:opacity-40"></div>
+        <img src="../img/photography/photography-05.jpg" alt="alt text for photo #05" class="object-cover w-full h-full">
+      </div>
+    
+      <div class="relative h-80" @click="isOpen = true">
+        <div class="absolute top-0 left-0 w-full h-full transition duration-300 bg-white opacity-0 hover:opacity-40"></div>
+        <img src="../img/photography/photography-06.jpg" alt="alt text for photo #06" class="object-cover w-full h-full">
+      </div>
+    
+      <div class="relative h-80" @click="isOpen = true">
+        <div class="absolute top-0 left-0 w-full h-full transition duration-300 bg-white opacity-0 hover:opacity-40"></div>
+        <img src="../img/photography/photography-07.jpg" alt="alt text for photo #07" class="object-cover w-full h-full">
+      </div>
+    
+      <div class="relative h-80" @click="isOpen = true">
+        <div class="absolute top-0 left-0 w-full h-full transition duration-300 bg-white opacity-0 hover:opacity-40"></div>
+        <img src="../img/photography/photography-08.jpg" alt="alt text for photo #08" class="object-cover w-full h-full">
+      </div>
+    
+      <div class="relative h-80" @click="isOpen = true">
+        <div class="absolute top-0 left-0 w-full h-full transition duration-300 bg-white opacity-0 hover:opacity-40"></div>
+        <img src="../img/photography/photography-09.jpg" alt="alt text for photo #09" class="object-cover w-full h-full">
+      </div>
+    
+      <div class="relative h-80" @click="isOpen = true">
+        <div class="absolute top-0 left-0 w-full h-full transition duration-300 bg-white opacity-0 hover:opacity-40"></div>
+        <img src="../img/photography/photography-10.jpg" alt="alt text for photo #10" class="object-cover w-full h-full">
+      </div>
+    
+      <div class="relative h-80" @click="isOpen = true">
+        <div class="absolute top-0 left-0 w-full h-full transition duration-300 bg-white opacity-0 hover:opacity-40"></div>
+        <img src="../img/photography/photography-11.jpg" alt="alt text for photo #11" class="object-cover w-full h-full">
+      </div>
+    
+      <div class="relative h-80" @click="isOpen = true">
+        <div class="absolute top-0 left-0 w-full h-full transition duration-300 bg-white opacity-0 hover:opacity-40"></div>
+        <img src="../img/photography/photography-12.jpg" alt="alt text for photo #12" class="object-cover w-full h-full">
+      </div>
+    
+      <div class="relative h-80" @click="isOpen = true">
+        <div class="absolute top-0 left-0 w-full h-full transition duration-300 bg-white opacity-0 hover:opacity-40"></div>
+        <img src="../img/photography/photography-13.jpg" alt="alt text for photo #13" class="object-cover w-full h-full">
+      </div>
+    
+      <div class="relative h-80" @click="isOpen = true">
+        <div class="absolute top-0 left-0 w-full h-full transition duration-300 bg-white opacity-0 hover:opacity-40"></div>
+        <img src="../img/photography/photography-14.jpg" alt="alt text for photo #14" class="object-cover w-full h-full">
+      </div>
+    
+      <div class="relative h-80" @click="isOpen = true">
+        <div class="absolute top-0 left-0 w-full h-full transition duration-300 bg-white opacity-0 hover:opacity-40"></div>
+        <img src="../img/photography/photography-15.jpg" alt="alt text for photo #15" class="object-cover w-full h-full">
+      </div>
+    
+      <div class="relative h-80" @click="isOpen = true">
+        <div class="absolute top-0 left-0 w-full h-full transition duration-300 bg-white opacity-0 hover:opacity-40"></div>
+        <img src="../img/photography/photography-16.jpg" alt="alt text for photo #16" class="object-cover w-full h-full">
+      </div>
+    
+      <div class="relative h-80" @click="isOpen = true">
+        <div class="absolute top-0 left-0 w-full h-full transition duration-300 bg-white opacity-0 hover:opacity-40"></div>
+        <img src="../img/photography/photography-17.jpg" alt="alt text for photo #17" class="object-cover w-full h-full">
+      </div>
+    
+      <div class="relative h-80" @click="isOpen = true">
+        <div class="absolute top-0 left-0 w-full h-full transition duration-300 bg-white opacity-0 hover:opacity-40"></div>
+        <img src="../img/photography/photography-18.jpg" alt="alt text for photo #18" class="object-cover w-full h-full">
+      </div>
+    
+      <div class="relative h-80" @click="isOpen = true">
+        <div class="absolute top-0 left-0 w-full h-full transition duration-300 bg-white opacity-0 hover:opacity-40"></div>
+        <img src="../img/photography/photography-19.jpg" alt="alt text for photo #19" class="object-cover w-full h-full">
+      </div>
+    
+      <div class="relative h-80" @click="isOpen = true">
+        <div class="absolute top-0 left-0 w-full h-full transition duration-300 bg-white opacity-0 hover:opacity-40"></div>
+        <img src="../img/photography/photography-20.jpg" alt="alt text for photo #20" class="object-cover w-full h-full">
+      </div>
+    
+      <div class="relative h-80" @click="isOpen = true">
+        <div class="absolute top-0 left-0 w-full h-full transition duration-300 bg-white opacity-0 hover:opacity-40"></div>
+        <img src="../img/photography/photography-21.jpg" alt="alt text for photo #21" class="object-cover w-full h-full">
+      </div>
+    
+      <div class="relative h-80" @click="isOpen = true">
+        <div class="absolute top-0 left-0 w-full h-full transition duration-300 bg-white opacity-0 hover:opacity-40"></div>
+        <img src="../img/photography/photography-22.jpg" alt="alt text for photo #22" class="object-cover w-full h-full">
+      </div>
+    
+      <div class="relative h-80" @click="isOpen = true">
+        <div class="absolute top-0 left-0 w-full h-full transition duration-300 bg-white opacity-0 hover:opacity-40"></div>
+        <img src="../img/photography/photography-23.jpg" alt="alt text for photo #23" class="object-cover w-full h-full">
+      </div>
+    
+      <div class="relative h-80" @click="isOpen = true">
+        <div class="absolute top-0 left-0 w-full h-full transition duration-300 bg-white opacity-0 hover:opacity-40"></div>
+        <img src="../img/photography/photography-24.jpg" alt="alt text for photo #24" class="object-cover w-full h-full">
+      </div>
+    
+      <div class="relative h-80" @click="isOpen = true">
+        <div class="absolute top-0 left-0 w-full h-full transition duration-300 bg-white opacity-0 hover:opacity-40"></div>
+        <img src="../img/photography/photography-25.jpg" alt="alt text for photo #25" class="object-cover w-full h-full">
+      </div>
+    
+      <div class="relative h-80" @click="isOpen = true">
+        <div class="absolute top-0 left-0 w-full h-full transition duration-300 bg-white opacity-0 hover:opacity-40"></div>
+        <img src="../img/photography/photography-26.jpg" alt="alt text for photo #26" class="object-cover w-full h-full">
+      </div>
+    
+      <div class="relative h-80" @click="isOpen = true">
+        <div class="absolute top-0 left-0 w-full h-full transition duration-300 bg-white opacity-0 hover:opacity-40"></div>
+        <img src="../img/photography/photography-27.jpg" alt="alt text for photo #27" class="object-cover w-full h-full">
+      </div>
+    
+      <div class="relative h-80" @click="isOpen = true">
+        <div class="absolute top-0 left-0 w-full h-full transition duration-300 bg-white opacity-0 hover:opacity-40"></div>
+        <img src="../img/photography/photography-28.jpg" alt="alt text for photo #28" class="object-cover w-full h-full">
+      </div>
+    
+      <div class="relative h-80" @click="isOpen = true">
+        <div class="absolute top-0 left-0 w-full h-full transition duration-300 bg-white opacity-0 hover:opacity-40"></div>
+        <img src="../img/photography/photography-29.jpg" alt="alt text for photo #29" class="object-cover w-full h-full">
+      </div>
+    
+      <div class="relative h-80" @click="isOpen = true">
+        <div class="absolute top-0 left-0 w-full h-full transition duration-300 bg-white opacity-0 hover:opacity-40"></div>
+        <img src="../img/photography/photography-30.jpg" alt="alt text for photo #30" class="object-cover w-full h-full">
+      </div>
+    
+      <div class="relative h-80" @click="isOpen = true">
+        <div class="absolute top-0 left-0 w-full h-full transition duration-300 bg-white opacity-0 hover:opacity-40"></div>
+        <img src="../img/photography/photography-31.jpg" alt="alt text for photo #31" class="object-cover w-full h-full">
+      </div>
+    
+  </div>
+</section>
 
     </div>
   </main>
