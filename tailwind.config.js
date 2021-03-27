@@ -10,5 +10,11 @@ module.exports = {
     },
   },
   plugins: [require("@tailwindcss/forms"), require("tailwindcss-debug-screens")],
-  purge: ["./src/**/*.js", "./src/**/*.html"],
+  purge: [
+    "./src/**/*.js",
+    "./src/*.html",
+    "./src/**/*.html",
+    "./src/**/**/*.html",
+    "./src/**/*.liquid",
+  ],
 };
